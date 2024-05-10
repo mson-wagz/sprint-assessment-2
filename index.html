@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC TAC TOE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik Glitch&effct=shadow-multiple" rel="stylesheet" type="text/css">
+    <style>
+        body{
+
+            background-image: url(images/images.jpg);background-repeat: no-repeat;background-size: cover
+        }
+    </style>
+    
+</head>
+<audio  autoplay loop>
+    <source src="EnV - FireFrost (320).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+<body class="min-h-screen bg-black">
+    
+    <h1 class="font-effect-shadow-multiple text-9xl text-white font-bold" style="font-family:Rubik Glitch">TIC TAC TOE</h1>
+    <div class="container mx-auto mt-24"></div>
+    <div class="w-96 h-fit bg-gray-900  relative top-2/4 left-1/3 rounded-lg mt-48 mb-36">
+        <p class="text-4xl text-white font-bold text-center p-3" id="welcome-text">SIGN UP</p>
+
+        <input type="text" name="username" id="username-inpt"
+        placeholder="Username" autocomplete="on" required class="block bg-black text-white w-80 h-10 mt-6 ml-9 rounded-lg p-2">
+        <input type="text" name="username" id="exusername-inpt"
+        placeholder="Enter your username" autocomplete="on" required class="hidden bg-black text-white w-80 h-10 mt-6 ml-9 rounded-lg p-2">
+        <p class="text-white pl-10 opacity-60 text-[9px] italic mt-2" id = 'name-specifications'>Your username!</p>
+
+        <input type="password" name="password" id="password-inpt"
+        placeholder="Password" autocomplete="on" required class="bg-black text-white w-80 h-10 mt-6 ml-9 rounded-lg p-2 ">
+        
+        <input type="password" name="password" id="expassword-inpt"
+        placeholder="Password" autocomplete="on" required class="hidden bg-black text-white w-80 h-10 mt-6 ml-9 rounded-lg p-2 ">
+        <p class="text-white pl-10 pt-2 opacity-60 text-[9px] italic" id="pass-specifications">(3-30 characters, no spaces)</p>
+
+
+        <button id="sign-up-btn" class=" text-slate-500 font-bold w-80 h-10 mt-8 ml-9 border rounded-lg ">Sign Up</button>
+        <button id="sign-in-btn" class="hidden text-slate-500 font-bold w-80 h-10 mt-8 ml-9 border rounded-lg ">Log in</button>
+        <p id="sign-in-link" class="italic opacity-80 text-white text-lg p-5 pl-8">Already have an account? <span  class="hover:opacity-80 hover:underline text-blue-300 cursor-pointer">Log in</span></p>
+        <p id="sign-up-link" class="italic opacity-80 hidden text-white text-lg p-5 pl-8">Don't have an account? <span  class="hover:opacity-80 hover:underline text-blue-300 cursor-pointer">Sign up</span></p>
+    </div>
+    </div>
+    <footer>
+        <footer id="footer" class="bg-gray-700 text-xl text-white sticky flex shrink-0  h-32 mt-auto ">
+           
+            <img src="images/Untitled design.png" alt="logo" class="m-4">
+            <div class="flex flex-col sm:gap-4 p-4 "></div>
+       <p class="text-right">Copyright &copy; <span id="year">2024</span></p>
+       <p class="text-right">All Rights Reserved</p>
+      </div>
+            
+    </footer>
+    <script src="signjs.js" defer></script>
+</body>
+</html>

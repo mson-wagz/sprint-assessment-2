@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- JavaScript for Game Logic -->
+    <script src="computer.js" defer></script>
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <p class="back"><a href="home.html">back</a></p>
+    
+    <!-- Start Game Button -->
+    <p class="bin">Do you have the guts? Click this button 👇</p>
+    <button id="computer-el">You vs Computer</button>
+    
+    <br><br>
+    
+    <!-- Tic-Tac-Toe Board -->
+    <div class="board" id="board">
+        <div class="cell" data-cell="0"></div>
+        <div class="cell" data-cell="1"></div>
+        <div class="cell" data-cell="2"></div>
+        <div class="cell" data-cell="3"></div>
+        <div class="cell" data-cell="4"></div>
+        <div class="cell" data-cell="5"></div>
+        <div class="cell" data-cell="6"></div>
+        <div class="cell" data-cell="7"></div>
+        <div class="cell" data-cell="8"></div>
+    </div>
+    
+    <!-- Winning Message Overlay -->
+    <div class="winning-message" aria-hidden="true">
+        <div data-winning-message-text></div> 
+        <button id="restart-el">Restart</button>
+    </div>
+    
+    
+    <br><br><br>
+    <hr>
+    
+    <!-- Footer with Logo and Copyright Information -->
+     <!-- <footer>
+        <img src="images/Untitled design.png" width="50px" alt="Logo"> -->
+        <div>
+            <p>Copyright &copy; <span id="year">2024</span></p>
+            <p>All Rights Reserved</p>
+        </div>
+    <!-- </footer>  -->
+    
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="EnV - FireFrost (320).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
