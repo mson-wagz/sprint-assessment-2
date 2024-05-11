@@ -91,7 +91,7 @@ const checkNameExist = () => {
     let theUserInpt = localStorage.getItem(exusernInpt.value)
     let errorUserMess = document.querySelector('#name-specifications')
     if (!theUserInpt){
-        errorUserMess.textContent = "This username doesn't exist"
+        errorUserMess.textContent = "Incorrect user name"
         return false}
         errorUserMess.textContent = 'Username verified'
     return true
@@ -109,7 +109,7 @@ const decodePass = () => {
 const checkPassIs = (val) => {
     let errorForPass =  document.querySelector('#pass-specifications')
     if (expassInpt.value !== val) {
-        errorForPass.textContent = 'Wrong Password'
+        errorForPass.textContent = 'Incorrect Password, Try again'
         return false
     }
     errorForPass.textContent = 'Logging in...'
