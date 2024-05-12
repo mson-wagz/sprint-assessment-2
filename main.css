@@ -1,6 +1,10 @@
+*{
+  box-sizing: border-box;
+  width: 100%;
+  
+  
 
-
-
+}
 .container {
   opacity: 1; /* Adjusted opacity value to 1 */
 }
