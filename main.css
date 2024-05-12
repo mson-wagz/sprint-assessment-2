@@ -1,52 +1,81 @@
-.container{
-    opacity: 10;
+
+
+
+.container {
+  opacity: 1; /* Adjusted opacity value to 1 */
 }
-.sliding-box{
-    position: absolute;
-    top: 90%;
+
+.sliding-box {
+  position: absolute;
+  top: 90%;
 }
-.box{
-     color:black;
-    text-align: left;
-    right: auto;
-    background-color:blanchedalmond;
-    border-radius: 20px;
-    margin-left:48rem ;
-    font-size:6rem;
-    transform: translateX(-50); 
-    margin-bottom: 60px;
-    opacity: 0;
-    animation: slide-up 20s ease infinite;
- }
-@keyframes slide-up{
+
+.box {
+  color: black;
+  text-align: left;
+  right: auto;
+  background-color: blanchedalmond;
+  border-radius: 20px;
+  margin-left: 48rem;
+  font-size: 6rem;
+  transform: translateX(-50);
+  margin-bottom: 60px;
+  opacity: 0;
+  animation: slide-up 20s ease infinite;
+}
+
+@keyframes slide-up {
   0% {
-    transform: translateY(-50%); 
-    opacity: 0;
-  } 
+      transform: translateY(-50%);
+      opacity: 0;
+  }
   100% {
-    transform: translateY( 0%); 
-    opacity: 1;
-  } 
+      transform: translateY(0%);
+      opacity: 1;
+  }
 }
+
 .box:nth-child(1) {
   animation-delay: 0.5s; /* Delay for the first text */
 }
+
 .box:nth-child(2) {
   animation-delay: 1s; /* Delay for the second text */
 }
+
 @media (min-width: 640px) {
-        .sliding-box {
-            flex-direction: row; /* For larger screens, arrange boxes horizontally */
-        }
-        .box {
-            margin-right: 2rem; /* Adjust margin for larger screens */
-        }
-    }
-    .bin{
-      font-family: Croissant One;
-      font-size: 2.5rem;
-      padding-left: 10px;
+  .sliding-box {
+      flex-direction: row; /* For larger screens, arrange boxes horizontally */
+  }
+  .box {
+      margin-right: 2rem; /* Adjust margin for larger screens */
+  }
+}
 
+@media (max-width: 768px) {
+  .sliding-box {
+      top: 80%; /* Adjust position for smaller screens */
+  }
+  .box {
+      font-size: 4rem; 
+      margin-left: 0; 
+      margin-bottom: 30px; 
+  }
+}
 
-    }
-    
+footer {
+  position: fixed; 
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.bin {
+  font-family: Croissant One;
+  font-size: 2.5rem;
+  padding-left: 10px;
+}
