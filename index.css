@@ -1,0 +1,244 @@
+*::before, 
+*::after,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: whitesmoke;
+    background-image:url(images/bg9.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Briem Hand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+header{
+    
+    padding: 10px;
+    width: 100%;
+} 
+h1{
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 0 #a9a9a9;
+    color: #444;
+    text-align: center;
+    background: none;
+    
+}
+
+.container{
+    margin-top: 10px;
+    /* border: 2px solid #333; */
+    /* width: 50vw; */
+    min-width: 350px;
+    height: 90vh;
+   /*  position: absolute;
+    top: 13vh;
+    left: 20vw; */
+    display: grid;
+    grid-template-rows: 80% 20%;
+   
+
+}
+.cell {
+    background: blanchedalmond;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 4px #000;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+  
+  .cell:hover {
+    background:blanchedalmond;
+  }
+  
+.mainbar{
+    background-color: none;
+}
+
+.bottombar{
+    
+    background-color: blanchedalmond;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button, 
+label{
+    height: 50%;
+    width: 20%;
+    margin-right: 5px;
+    border-radius: 10px;
+    color: whitesmoke;
+
+}
+
+span{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: whitesmoke;
+    height: 50%;
+    width: 20%;
+    border-radius: 10px;
+}
+
+
+span li {
+    color: rgba(0, 174, 255, 0.844);
+}
+
+ul{
+    list-style: none;
+}
+
+button{
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+}
+button, ul li{
+    cursor: pointer;
+}
+
+
+
+/*   position: relative;
+    color: #333;
+    bottom: -2vh; */
+    
+
+
+.tictactoeboard{
+    width: 70%;
+    /* height: 80%; */
+    margin: auto;
+    margin-top: 5%;
+    display: none;
+    grid-template-columns: repeat(3, auto); /*  3 columns per row, size should be auto */
+    justify-content: center;
+    align-items: center;
+    align-content: center; /* To remove the spacing */
+    
+}
+
+.cell{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* To remove the outlining border */
+
+.cell:first-child,:nth-child(2),:nth-child(3){
+    border-top: none;
+}
+
+.cell:last-child,:nth-child(8),:nth-child(7){
+    border-bottom: none;
+}
+
+.cell:nth-child(3n){
+    border-right: none;
+}
+
+.cell:nth-child(3n + 1){
+    border-left: none;
+}
+
+.tictactoeboard.cross .cell:not(.circle):not(.cross):hover::before,
+.cell.cross::before{
+    content: '';
+    position: absolute;
+    height: 95px;
+    width: 2px;
+    background-color: #333;
+    transform: rotate(-45deg);
+}
+
+.tictactoeboard.cross .cell:not(.circle):not(.cross):hover::after,
+.cell.cross::after{
+    content: '';
+    position: absolute;
+    height: 95px;
+    width: 2px;
+    background-color: #333;
+    transform: rotate(45deg);
+}
+
+
+.tictactoeboard.circle .cell:not(.cross):not(.circle):hover::before,
+.cell.circle::before{
+    content: '';
+    position: absolute;
+    height: 95px;  /* Keep difference between height and weight to same */
+    width: 91px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+.tictactoeboard.circle .cell:not(.cross):not(.circle):hover::after,
+.cell.circle::after{
+    content: '';
+    position: absolute;
+    height: 89px;
+    width: 85px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
+.cell.circle,.cell.cross{
+    cursor: not-allowed;
+}
+
+
+/* SMALL */
+@media screen and (min-width: 576px) {
+    .container{
+        min-width: 400px;
+    }
+}
+  
+  /* MEDIUM */
+@media screen and (min-width: 768px) {
+    .container{
+        min-width: 500px;
+    }
+}
+  
+  /* LARGE */
+@media screen and (min-width: 992px) {
+    .container{
+        min-width: 600px;
+    }
+}
+  
+  /* XL */
+@media screen and (min-width: 1200px) {
+    .container{
+        min-width: 1000px;
+    }
+}
+  
